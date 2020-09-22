@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CGS Construcciones Generales y Servicios</title>
+	<link rel="icon" href={{ url_for ('static', filename="img/icono.png")}}>
+
+	<!-----------------------------
+				 CSS
+	------------------------------->
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+	<!-- Hoja de Estilo Personalizada -->
+	<link rel="stylesheet" href={{ url_for ('static', filename="css/style1.css")}}>
+	<!-- Fuente Open Sans y Ubuntu -->
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Ubuntu" rel="stylesheet">
+	<!-- Fuente Roboto-->
+	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+	<!-- Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+	<!-- jdSlider -->
+	<link rel="stylesheet" href={{ url_for('static', filename="css/jquery.jdSlider.css")}}>
+
+	<!-----------------------------
+				 Javascript
+	------------------------------->		
+	<!-- jQuery library -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<!-- Popper JS -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+	<!-- Latest compiled JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+	<!-- https://easings.net/es# -->
+	<script type=text/javascript src={{ url_for('static', filename="js/plugins/jquery.easing.js")}}></script>
+	<!-- https://markgoodyear.com/labs/scrollup/ -->
+	<script type=text/javascript src={{ url_for('static', filename="js/plugins/scrollUP.js")}}></script>
+	<!-- jdSlider -->
+	<!-- https://www.jqueryscript.net/slider/Carousel-Slideshow-jdSlider.html -->
+	<script src={{ url_for ('static', filename="js/plugins/jquery.jdSlider-latest.js")}}></script>
+
+</head>
+<body>
+	<!--=====================================
+                Header
+	======================================-->
+	<header class="container-fluid p-0 bg-white">
+		<div class="container  p-1">
+			<div class="grid-container p-2">
+				<!--LOGO--> 
+				<div class="grid-item">
+					<a href={{ url_for('index' )}}>
+						<img src={{ url_for('static', filename="img/logo.png")}} class="img-fluid">
+					</a>
+				</div>
+
+				<div class="grid-item d-none d-lg-block"></div>
+
+				<!--SELECCIÓN DE IDIOMA--> 
+				<div class="grid-item d-none d-lg-block mt-1 idiomas">       
+						<span class="border border-info float-left p-1 bg-info text-white idiomaEs">ES</span>
+
+						<span class="border border-info float-left p-1 bg-white text-dark idiomaEn">EN</span>
+				</div>
+
+				<!-- MENÚ HAMBURGUESA-->
+
+				<div class="grid-item mt-1 mt-sm-3 mt-md-4 mt-lg-2 botonMenu">   
+						<i class="fas fa-bars lead"></i>
+				</div>
+			</div>
+	
+		</div>
+
+	</header>
+	<!--=====================================
+    		        MENÚ
+	======================================-->
+	
+	<nav class="menu container-fluid p-0">
+		<ul class="nav nav-justified py-2">
+			<li class="nav-item">
+			  <a class="nav-link text-white" href="#inicio">Inicio</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link text-white" href="#quienessomos">Quienes Somos</a>
+			  </li>
+			<li class="nav-item">
+			  <a class="nav-link text-white" href="#obras">Obras</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link text-white" href="#contacto">Contacto</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link text-white" href="#presupuestador">Presupuestador</a>
+			</li>
+			<li class="nav-item">
+				<ul class="my-2 py-1">
+                            
+					<li>
+						<a href="#" target="_blank">
+							<i class="fab fa-facebook-f text-white float-left mx-2"></i>
+						</a>
+					</li>
+
+					<li>
+						<a href="#" target="_blank">
+							<i class="fab fa-twitter text-white float-left mx-2"></i>
+						</a>
+					</li>
+
+					<li>
+						<a href="#" target="_blank">
+							<i class="fab fa-youtube text-white float-left mx-2"></i>
+						</a>
+					</li>
+
+					<li>
+						<a href="#" target="_blank">
+							<i class="fab fa-instagram text-white float-left mx-2"></i>
+						</a>
+					</li>
+
+				</ul>
+			</li>
+
+		</ul> 
+	</nav>
+
+<!--=====================================
+			MENÚ MÓVIL
+======================================-->
+<div class="menuMovil">
+
+	<ul class="nav flex-column mt-1 pl-4 mb-5">
+		
+		<li class="nav-item">
+			<a class="nav-link text-white my-2" href="#inicio">Inicio</a>
+		</li>
+
+		<li class="nav-item">
+			<a class="nav-link text-white my-2" href="#quienessomos">Quienes somos</a>
+		</li>
+
+		<li class="nav-item">
+			<a class="nav-link text-white my-2" href="#obras">Obras</a>
+		</li>
+
+		<li class="nav-item">
+			<a class="nav-link text-white my-2" href="#contacto">Contacto</a>
+		</li>
+
+		<li class="nav-item">
+			<a class="nav-link text-white my-2" href="#presupuestador">Presupuestador</a>
+		</li>
+
+	</ul>
+
+</div>
+<!--=====================================
+			BANNER
+======================================-->
+
+<div class="banner container-fluid p-0">
+	
+	<div class="jd-slider fade-slider">
+		
+		<div class="slide-inner">
+			
+			<ul class="slide-area">
+				
+				 <li>					
+					<img src={{ url_for('static', filename="img/banner01.png")}} width="100%">
+					
+                </li>
+
+                <li>              	
+					<img src={{ url_for('static', filename="img/banner02.png")}} width="100%">
+					
+                </li>
+
+                <li>               	
+					<img src={{ url_for('static', filename="img/banner03.png")}} width="100%">
+					
+                </li>
+
+                <li>               	
+					<img src={{ url_for('static', filename="img/banner04.png")}} width="100%">
+					
+                </li>
+
+			</ul>
+
+		</div>
+        
+	 	<div class="controller d-none">
+		 	
+			<a class="auto" href="#">
+
+                <i class="fas fa-play fa-xs"></i>
+                <i class="fas fa-pause fa-xs"></i>
+
+            </a>
+
+            <div class="indicate-area"></div>
+
+	 	</div>
+
+	 	<div class="verMas text-center bg-white rounded-circle d-none d-lg-block" vinculo="#quienessomos">
+    
+    		<i class="fas fa-chevron-down"></i>	
+
+    	</div>
+   
+	</div>
+
+</div>
+
+
+
+
+	<!--=====================================
+				QUIENES SOMOS
+	======================================-->
+
+	<div class="quienessomos container-fluid bg-white p-0" id="quienessomos">
+	
+			<div class="container p-0">
+				
+				<div class="grid-container">
+					
+					<div class="grid-item">
+						
+						<h1 class="text-center py-3 py-lg-5 px-5 tituloPlan" tituloPlan="BIENVENIDO">BIENVENIDO</h1>
+
+						<p class="text-muted text-left px-4 descripcionPlan" descripcionPlan="Somos una empresa que tiene 5 - 6  años de experiencia en el rubro de instalaciones electricas, hemos realizado tareas de instalaciones, así como tambien actualizaciones y tecnificaciones de complejidades muy variadas.">Somos una empresa que tiene 5 - 6  años de experiencia en el rubro de instalaciones electricas, realizamos tareas de instalaciones, así como tambien actualizaciones y tecnificaciones de complejidades muy variadas.</p>
+
+					</div>
+
+					<div class="grid-item d-none d-lg-block" data-toggle="modal" data-target="#modalQuienesSomos">
+						
+						<figure class="text-center">
+							
+							<h1 descripcion="Se entiende por instalación industrial al conjunto de medios o recursos necesarios para llevar a cabo los procesos de fabricación y de servicio dentro de un sistema de organización industrial">Instalaciones Industriales</h1>
+
+						</figure>
+
+						<img src={{ url_for('static', filename="img/insta-industrial.jpg")}} class="img-fluid" width="100%">
+
+
+					</div>
+
+					<div class="grid-item d-none d-lg-block" data-toggle="modal" data-target="#modalQuienesSomos">
+						
+						<figure class="text-center">
+							
+							<h1 descripcion="Las instalaciones eléctricas domiciliarias son conexiones fundamentales ya que son la fuente de suministro eléctrico de nuestros hogares.">Instalaciones Domiciliarias</h1>
+
+						</figure>
+
+						<img src={{ url_for('static', filename="img/insta-domiciliaria.jpg")}} class="img-fluid" width="100%">
+
+
+					</div>
+
+					<div class="grid-item d-none d-lg-block" data-toggle="modal" data-target="#modalQuienesSomos">
+						
+						<figure class="text-center">
+							
+							<h1 descripcion="Un plano eléctrico es la representación de los diferentes circuitos que componen y definen las características de una instalación eléctrica y donde se detallan las particularidades de los materiales y dispositivos existentes.">Realizacion de Planos</h1>
+
+						</figure>
+
+						<img src={{ url_for('static', filename="img/realiza-planos.jpg")}} class="img-fluid" width="100%">
+
+					</div>
+
+					<div class="grid-item d-none d-lg-block" data-toggle="modal" data-target="#modalQuienesSomos">
+						
+						<figure class="text-center">
+							
+							<h1 descripcion="El mantenimiento preventivo se efectúa con la intención de reducir la probabilidad de fallo en las instalaciones,  contar con la documentación técnica, además de conocer la maquinaria, los históricos de funcionamiento y los análisis técnicos de todo el equipo.">Mantenimiento de Instalaciones</h1>
+
+						</figure>
+
+						<img src={{ url_for('static', filename="img/mante-electrico.jpg")}} class="img-fluid" width="100%">
+
+					</div>
+					
+				</div>
+
+			</div>
+
+	</div>
+<!--=====================================
+		QUIENES SOMOS MÓVIL
+======================================-->
+
+<div class="d-block d-lg-none quienessomosMovil jd-slider bg-white" id="quienessomosMovil">
+
+	<h1 class="text-center py-3">QUIENES SOMOS</h1>
+
+	 <div class="slide-inner">
+	 	
+		 <ul class="slide-area">
+		 	
+			<li>
+				
+				<a href="#modalQuienesSomos" data-toggle="modal" descripcion="Se entiende por instalación industrial explicacion">
+					
+					<img src={{ url_for('static', filename="img/insta-industrial.jpg")}} width="100%">
+					<h6 class="py-2 text-center">Instalaciones Industriales</h6>
+
+				</a>
+
+			</li>
+
+			<li>
+				
+				<a href="#modalQuienesSomos" data-toggle="modal" descripcion="Las instalaciones eléctricas domiciliarias explicacion.">
+                	<img src={{ url_for('static', filename="img/insta-domiciliaria.jpg")}} width="100%">
+                	<h6 class="py-2 text-center">Instalaciones Domiciliarias</h6>
+                </a>
+
+			</li>
+
+			<li>
+				
+			  	<a href="#modalQuienesSomos" data-toggle="modal" descripcion="realizacion de planos de instalaciones electricas">
+                	<img src={{ url_for('static', filename="img/realiza-planos.jpg")}} width="100%">
+                	<h6 class="py-2 text-center">Mantenimiento de Instalaciones</h6>
+                </a>
+
+			</li>
+
+			<li>
+				
+			  <a href="#modalQuienesSomos" data-toggle="modal" descripcion="Mantenimiento de tableros electricos">
+                	<img src={{ url_for('static', filename="img/mante-electrico.jpg")}} width="100%">
+                	<h6 class="py-2 text-center">Realizacion de Planos</h6>
+                </a>
+
+			</li>
+
+
+		 </ul>
+
+	 	<a class="prev" href="#">
+            <i class="fas fa-angle-left text-muted"></i>
+        </a>
+
+        <a class="next" href="#">
+            <i class="fas fa-angle-right text-muted"></i>
+        </a>
+
+ 	</div>
+
+  	<div class="controller">
+
+        <div class="indicate-area"></div>
+
+    </div>
+			   
+</div>
+
+<!--=====================================
+VENTANA MODAL QUIENES SOMOS
+======================================-->
+
+<div class="modal" id="modalQuienesSomos">
+	
+	<div class="modal-dialog">
+		   
+	   <div class="modal-content">
+		   
+			 <div class="modal-header">
+			   <h4 class="modal-title"></h4>
+			   <button type="button" class="close" data-dismiss="modal">&times;</button>
+			 </div>
+		   
+			<div class="modal-body">
+				  
+				  <img src="" class="img-thumbnail">
+			   
+			   <p class="py-3"></p>
+				  
+				  <div class="text-center">
+				   <!--<a href="habitaciones.html" class="btn btn-primary text-center">Separa tu habitación</a>-->
+			   </div>
+
+			 </div>
+
+			  <div class="modal-footer">
+			   <button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+			 </div>
+
+	   </div> 	
+
+	</div>
+
+</div>
+
+<!--=====================================
+			 OBRAS
+======================================-->
+
+<div class="obras container-fluid bg-light" id="obras">
+	
+	<div class="container">
+
+		<h1 class="pt-4 text-center">OBRAS</h1>
+
+		<div class="row p-4 text-center">
+			
+			<div class="col-12 col-lg-4 pb-3 px-0 px-lg-3 obra-item" data-toggle="modal" data-target="#modalObras">				
+				
+				
+					
+					<figure class="text-center">
+						
+						<img src={{ url_for ('static' , filename = "img/obra-tablero.jpg")}} class="img-fluid" width="100%">
+
+						<p class="small py-4 mb-0">Formosa Capital</p>
+
+						<h3 class="py-2 text-white mb-0"  style="background:#17A2B8">Instalacion de Tableros</h3>
+						<a href={{ url_for('static', filename="obrasdetalle.html")}}></a>
+						<h5 class="py-2 text-gray-dark border">Ver detalles <i class="fas fa-chevron-right ml-2"></i></h5>
+						</a>
+						<h1 class="text-white p-3 mx-auto w-50 lead" style="background:#17A2B8" descripcion="Descripcion de la instalacion breve">OBRA N° 1</h1>
+
+					</figure>
+					
+				
+			</div>
+
+			<div class="col-12 col-lg-4 pb-3 px-0 px-lg-3 obra-item" data-toggle="modal" data-target="#modalObras">
+				
+				
+					
+					<figure class="text-center">
+						
+						<img src={{ url_for ('static' , filename = "img/obra-planta.jpg")}} class="img-fluid" width="100%">
+
+						<p class="small py-4 mb-0">Gral Mansilla - Formosa</p>
+
+						<h3 class="py-2 text-white mb-0" style="background:#17A2B8">Planta Potabilizadora</h3>
+						<a href={{ url_for('static', filename="obrasdetalle.html")}}></a>
+						<h5 class="py-2 text-gray-dark border">Ver detalles <i class="fas fa-chevron-right ml-2"></i></h5>
+						</a>
+						<h1 class="text-white p-3 mx-auto w-50 lead" style="background:#17A2B8" descripcion="Descripcion breve de la planta">OBRA N° 2</h1>
+
+					</figure>
+
+				
+
+			</div>
+
+			<div class="col-12 col-lg-4 pb-3 px-0 px-lg-3 obra-item" data-toggle="modal" data-target="#modalObras">
+				
+				
+					
+					<figure class="text-center" >
+						
+						<img src={{ url_for ('static' , filename = "img/obra-domiciliaria.jpg")}} class="img-fluid" width="100%">
+
+						<p class="small py-4 mb-0">Formosa Capital</p>
+
+						<h3 class="py-1 text-white mb-0" style="background:#17A2B8">Instalaciones Domiciliarias</h3>
+						<a href={{ url_for('static', filename="obrasdetalle.html")}}></a>
+						<h5 class="py-2 text-gray-dark border" >Ver detalles <i class="fas fa-chevron-right ml-2"></i></h5>
+						</a>
+						<h1 class="text-white p-3 mx-auto w-50 lead" style="background:#17A2B8" descripcion="Descripcion breve de la instalacion">OBRA N° 3</h1>
+
+					</figure>
+
+				
+
+			</div>
+
+		</div>
+
+	</div>
+
+</div>
+<!--=====================================
+		OBRAS MÓVIL
+======================================-->
+
+<div class="d-block d-lg-none obrasMovil jd-slider bg-white" id="obrasMovil">
+
+	<h1 class="text-center py-3">OBRAS</h1>
+
+	 <div class="slide-inner">
+	 	
+		 <ul class="slide-area">
+		 	
+			<li>
+				
+				<a href="#modalObras" data-toggle="modal" descripcion="Descripcion de la instalacion breve">
+					
+					<img src={{ url_for ('static' , filename = "img/obra-tablero.jpg")}} width="100%">
+					<h6 class="py-2 text-center">Instalacion de Tableros</h6>
+				</a>
+
+			</li>
+
+			<li>
+				
+				<a href="#modalObras" data-toggle="modal" descripcion="Descripcion breve de la planta">
+                	<img src={{ url_for ('static' , filename = "img/obra-planta.jpg")}} width="100%">
+                	<h6 class="py-2 text-center">Planta Potabilizadora</h6>
+                </a>
+
+			</li>
+
+			<li>
+				
+			  	<a href="#modalObras" data-toggle="modal" descripcion="Descripcion breve de la instalacion">
+                	<img src={{ url_for ('static' , filename = "img/obra-domiciliaria.jpg")}} width="100%">
+                	<h6 class="py-2 text-center">Instalaciones Domiciliarias</h6>
+                </a>
+
+			</li>
+
+			
+		 </ul>
+
+	 	<a class="prev" href="#">
+            <i class="fas fa-angle-left text-muted"></i>
+        </a>
+
+        <a class="next" href="#">
+            <i class="fas fa-angle-right text-muted"></i>
+        </a>
+
+ 	</div>
+
+  	<div class="controller">
+
+        <div class="indicate-area"></div>
+
+    </div>
+			   
+</div>
+
+<!--=====================================
+		VENTANA MODAL  OBRAS
+======================================-->
+<div class="modal fade" id="modalObras">
+	<div class="modal-dialog">
+		<div class="modal-content">
+		
+			<div class="modal-header">
+				<h4 class="modal-title"></h4>
+				<button type="button" class="close" data-dismiss="modal">&times;</button>
+			</div>
+			<div class="modal-body">
+				<img src="" class="img-thumbnail">
+			   
+			   <p class="py-3"></p>
+				  
+				  <div class="text-center">
+				   
+			   </div>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-danger" data-dismiss="modal">Cerrar</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--=====================================
+		CONTÁCTENOS
+======================================-->
+
+<div class="contacto container-fluid bg-white py-4" id="contacto">
+	
+	<div class="container text-center">
+		
+		<h1 class="py-sm-4">CONTÁCTENOS</h1>
+
+		<form>
+
+			<div class="input-group input-group-lg">
+				
+				<input type="text" class="form-control mb-3 mr-2 form-control-lg" placeholder="Nombre">
+
+				<input type="text" class="form-control mb-3 ml-2 form-control-lg" placeholder="Apellido">
+
+			</div>
+
+			<div class="input-group input-group-lg">
+				
+				<input type="text" class="form-control mb-3 mr-2 form-control-lg" placeholder="Celular">
+
+				<input type="text" class="form-control mb-3 ml-2 form-control-lg" placeholder="Correo Electrónico">
+
+			</div>
+
+			<textarea class="form-control" rows="6" placeholder="Escribe aquí tu mensaje"></textarea>
+
+			<input class="btn btn-dark my-4 btn-lg py-3 text-uppercase" value="Enviar">
+
+		</form>
+
+	</div>
+
+</div>
+
+<!--=====================================
+MAPA
+======================================-->
+<div class="mapa container-fluid bg-white p-0">
+	
+	<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d1790.2621233229963!2d-58.206518516532896!3d-26.179619365199848!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1592612054117!5m2!1ses!2sar" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+
+	<div class=" p-4 info"> 
+
+		<h3 class="mt-0"><strong>Visítanos</strong></h3>
+		<p>Horarios de Lunes a viernes de 9 a 17 hs <br>
+			Sabados de 8 a 14 hs.</p>
+		<p>
+		CGS Construcciones Generales<br>
+		y Servicios<br>
+		Formosa Capital, CP 3600<br>
+		Tel: 408-996-1010
+		</p>
+
+		<p class="pb-4">Email: contacto@cgsformosa.com</p>
+
+	</div>	
+
+</div>
+
+<!--=====================================
+FOOTER
+======================================-->
+
+<footer class="container-fluid p-0">
+
+	<div class="grid-container">
+			
+		<div class="grid-item d-none d-lg-block pt-2"></div>
+
+		<div class="grid-item d-none d-lg-block pt-2">
+			
+			<p>LR Desarrollos Web - Contactanos en nuestras redes.</p>
+
+		</div>
+
+		<div class="grid-item pt-2">
+			
+			<ul class="py-1">
+
+				<li>
+					<a href="#" target="_blank"><i class="fab fa-facebook-f lead text-white float-left mx-3"></i></a>
+				</li>
+
+				<li>
+					<a href="#" target="_blank"><i class="fab fa-twitter lead text-white float-left mx-3"></i></a>
+				</li>
+
+				<li>
+					<a href="#" target="_blank"><i class="fab fa-youtube lead text-white float-left mx-3"></i></a>
+				</li>
+
+
+				<li>
+					<a href="#" target="_blank"><i class="fab fa-instagram lead text-white float-left mx-3"></i></a>
+				</li>	
+			
+			</ul>	
+
+		</div>
+
+	</div>
+
+</footer>
+
+<!--=====================================
+REDES SOCIALES MÓVIL
+======================================-->
+
+<ul class="redesMovil p-2 nav nav-justified">
+
+	<li class="nav-item">
+		<a href="#" target="_blank"><i class="fab fa-facebook-f lead text-white"></i></a>
+	</li>
+
+	<li class="nav-item">
+		<a href="#" target="_blank"><i class="fab fa-twitter lead text-white"></i></a>
+	</li>
+
+	<li class="nav-item">
+		<a href="#" target="_blank"><i class="fab fa-youtube lead text-white"></i></a>
+	</li>
+
+	<li class="nav-item">
+		<a href="#" target="_blank"><i class="fab fa-instagram lead text-white"></i></a>
+	</li>	
+
+</ul>	
+
+<script type=text/javascript src={{ url_for('static', filename="js/script1.js")}}></script>
+
+</body>
+</html>
